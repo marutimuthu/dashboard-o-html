@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+
+#sidebar {
+                transition: ease-in-out all .1s;
+                z-index: 9999;
+            }
+    
+            #sidebar span {
+                opacity: 0;
+                position: absolute;
+                transition: ease-in-out all .1s;
+            }
+    
+            #sidebar:hover {
+                width: 180px;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                /*shadow-2xl*/
+            }
+    
+            #sidebar:hover span {
+                opacity: 1;
+            }
+            
+  body{
+    margin: 0;
+    padding:0;
+  }
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  float: right;
+  align-content: flex-end;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #fbfffc;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin-top: 20%;
+  
+}
+
+.btn{
+  border: 1 px solid black;
+  background: none;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 40px;
+  cursor:pointer;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+          <!-- Side bar-->
+          <div id="sidebar" class="h-screen w-16 menu bg-white text-white px-4 flex items-center static fixed shadow">
+
+            <ul class="list-reset">
+                <li class="my-2 md:my-0">
+                    <a href="/users"
+                        class="block py-1 md:py-3 pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400">
+                        <i class="fas fa-home fa-fw mr-3 text-indigo-400 text-xl"></i><span
+                            class="w-full inline-block text-lg">Users</span>
+                    </a>
+                </li>
+                <li class="my-2 md:my-0">
+                    <a href="/recipe"
+                        class="block py-1 md:py-3 pl-1 align-middle text-gray-600 no-underline hover:text-indigo-400">
+                        <i class="fas fa-chart-area fa-fw mr-3 text-xl"></i><span class="w-full inline-block text-lg">Recipe</span>
+                    </a>
+                </li>
+                
+            </ul>
+    
+        </div>
+
+<!--RIGHT SIDE -->
+
+<div class="border-b ">
+    <table id="customers" class="p-3 text-gray-700">
+    <tr>
+        <th class="text-center text-blue-900 font-bold w-1/3"> Username </th>
+        <th class="text-center text-blue-900 font-bold w-1/3"> Level </th>
+        <th class="text-center text-blue-900 font-bold w-1/3"> Status </th>
+    </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+  <tr>
+    <td>North/South</td>
+    <td>Simon Crowther</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Paris spécialités</td>
+    <td>Marie Bertrand</td>
+    <td>France</td>
+  </tr>
+</table>
+</div>
+ 
+<!-- LEFT SIDE -->
+
+<div class="container">
+  <a href="add_user.html">
+    <button class="btn btn1 bg-blue-100 uppercase text-sm hover:bg-blue-500 text-gray-800 font-semibold hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded">Add User</button>
+  </a>
+  <a href="update_user.html">
+    <button class="btn btn2 bg-blue-100 uppercase text-sm hover:bg-blue-500 text-gray-800 font-semibold hover:text-white py-2 px-5 border border-blue-500 hover:border-transparent rounded">Edit User</button>
+  </a>
+</div>
+
+</body>
+</html>
